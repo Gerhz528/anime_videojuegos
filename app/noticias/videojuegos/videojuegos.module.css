@@ -1,0 +1,135 @@
+/* ===== Contenedor general ===== */
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* ===== Breadcrumb (reutiliza estilo del sitio) ===== */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+.breadcrumb a {
+  color: var(--amarillo);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: var(--coral);
+}
+.sep { opacity: 0.6; }
+.actual { color: var(--amarillo-claro); font-weight: 600; }
+
+/* ===== Encabezado ===== */
+.titulo {
+  font-size: 2.2rem;
+  color: var(--amarillo-claro);
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 10px rgba(201, 62, 113, 0.5);
+}
+.fechaMes {
+  color: var(--coral);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.intro {
+  color: var(--texto-suave);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== Lista de juegos ===== */
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ===== Juego individual ===== */
+.juego {
+  border-left: 4px solid var(--coral);
+  padding-left: 1.2rem;
+  transition: border-color 0.2s ease;
+}
+.juego:hover {
+  border-color: var(--amarillo);
+}
+
+/* ===== Fila superior: título + fecha ===== */
+.juegoHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.juegoTitulo {
+  color: var(--amarillo-claro);
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 0;
+}
+.juegoFecha {
+  color: var(--coral);
+  font-size: 0.9rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ===== Plataformas ===== */
+.plataformas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+.plataforma {
+  background-color: var(--azul-medio);
+  color: var(--amarillo-claro);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Descripción ===== */
+.juegoDesc {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Botón de enlace (opcional) ===== */
+.btn {
+  display: inline-block;
+  margin-top: 0.6rem;
+  background-color: var(--coral);
+  color: var(--casi-negro);
+  font-weight: bold;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+.btn:hover {
+  background-color: var(--amarillo);
+}
+
+/* ===== Mensaje vacío ===== */
+.vacio {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--texto-suave);
+  border: 2px dashed var(--azul-medio);
+  border-radius: 12px;
+}

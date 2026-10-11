@@ -1,0 +1,171 @@
+/* ===== Layout general ===== */
+.noticiasWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: var(--amarillo);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--coral);
+}
+
+.breadcrumb .sep {
+  opacity: 0.6;
+}
+
+.breadcrumb .actual {
+  color: var(--amarillo-claro);
+  font-weight: 600;
+}
+
+/* ===== Título de sección ===== */
+.tituloSeccion {
+  font-size: 2rem;
+  color: var(--amarillo-claro);
+  margin-bottom: 0.6rem;
+  text-shadow: 0 0 10px rgba(201, 62, 113, 0.5);
+}
+
+.subtituloSeccion {
+  color: var(--texto-suave);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ===== Grid de noticias ===== */
+.noticiasGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.8rem;
+}
+
+/* ===== Tarjeta de noticia ===== */
+.noticia {
+  background-color: var(--azul-oscuro);
+  border: 1px solid var(--azul-medio);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.noticia:hover {
+  transform: translateY(-4px);
+  border-color: var(--coral);
+  box-shadow: 0 8px 20px rgba(201, 62, 113, 0.35);
+}
+
+/* Imagen / placeholder de la noticia */
+.noticiaImg {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, var(--azul-medio) 0%, var(--magenta) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amarillo-claro);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.noticiaImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cuerpo de la noticia */
+.noticiaBody {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-grow: 1;
+}
+
+/* Etiqueta de categoría */
+.categoria {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--magenta);
+  color: var(--amarillo-claro);
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.categoriaVideojuego {
+  background-color: var(--coral);
+  color: var(--casi-negro);
+}
+
+.noticia h2,
+.noticia h3 {
+  color: var(--amarillo-claro);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.noticia .fecha {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  opacity: 0.8;
+}
+
+.noticia p {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.noticia .btnLeer {
+  align-self: flex-start;
+  background-color: var(--coral);
+  color: var(--casi-negro);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+  margin-top: 0.4rem;
+}
+
+.noticia .btnLeer:hover {
+  background-color: var(--amarillo);
+}
+
+/* ===== Mensaje vacío ===== */
+.vacio {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--texto-suave);
+  border: 2px dashed var(--azul-medio);
+  border-radius: 12px;
+  font-size: 1rem;
+}
