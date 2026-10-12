@@ -26,6 +26,8 @@ export default function Home() {
         <h2>Noticias / Novedades</h2>
         <div className="grid">
 
+
+          {/* tarjeta de noticias de anime */}
           <Link href="/noticias/anime" className="card card-link">
             <div className="card-img">
               <img src="/noticias_anime.jpg" alt="Noticias Anime"/>
@@ -35,6 +37,7 @@ export default function Home() {
             <span className="btn">Ver más</span>
           </Link>
 
+          {/* tarjeta de noticias de videojuegos */}
           <Link href="/noticias/videojuegos" className="card card-link">
             <div className="card-img">
               <img src="/noticias_videojuegos.jpg" alt="Noticias de videojuegos"/>
@@ -52,16 +55,17 @@ export default function Home() {
         <h2>Anime</h2>
         <div className="grid">
 
+          {/* tarjeta de información de anime */}
           <Link href="/anime/informacion" className="card card-link">
             <div className="card-img">
               <img src="/informacion_anime.jpg" alt="Informacion Anime"/>
             </div>
-
             <h3>Información</h3>
             <p>Fichas, datos y curiosidades del mundo del anime.</p>
             <span className="btn">Ver más</span>
           </Link>
 
+          {/* tarjeta de reseñas de anime */}
           <Link href="/anime/resenas" className="card card-link">
             <div className="card-img">
             <img src="/informacion.jpg" alt="Resenias Anime"/>
@@ -71,6 +75,7 @@ export default function Home() {
             <span className="btn">Ver más</span>
           </Link>
 
+          {/* tarjeta de animes de anime */}
           <Link href="/anime/memes" className="card card-link">
             <div className="card-img">
               <img src="/mim.jpeg" alt="Memes Anime" className="meme"/>
@@ -88,6 +93,7 @@ export default function Home() {
         <h2>Videojuegos</h2>
         <div className="grid">
 
+          {/* tarjeta de información de videojuegos */}
           <Link href="/videojuegos/informacion" className="card card-link">
             <div className="card-img">
               <img src="/wp10523090.jpg" alt="Informacion videojuegos"/>
@@ -97,6 +103,7 @@ export default function Home() {
             <span className="btn">Ver más</span>
           </Link>
 
+          {/* tarjeta de reseñas de videojuegos */}
           <Link href="/videojuegos/resenas" className="card card-link">
             <div className="card-img">
               <img src="/reseña.jpg" alt="Resenias Anime"/>
@@ -106,6 +113,7 @@ export default function Home() {
             <span className="btn">Ver más</span>
           </Link>
 
+          {/* tarjeta de memes de videojuegos */}
           <Link href="/videojuegos/memes" className="card card-link">
             <div className="card-img">
               <img src="/maincra.jpg" alt="Memes de videojuegos"/>
