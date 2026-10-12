@@ -1,64 +1,55 @@
 import Link from 'next/link';
+import NoticiasClient from './NoticiasClient';
 import styles from './noticias.module.css';
 
 export const metadata = {
-  title: 'Noticias | Isekai Respawn',
+  title: 'Noticias de Anime y Videojuegos | Isekai Respawn',
   description:
-    'Noticias de anime y videojuegos sin anuncios. Últimas novedades, estrenos y eventos.',
+    'Últimas noticias de anime y videojuegos sin anuncios. Estrenos, lanzamientos, eventos y novedades del mundo otaku y gamer.',
   keywords: [
     'noticias de anime',
     'noticias de videojuegos',
-    'noticias sin anuncios',
-    'novedades anime y gaming',
+    'noticias de anime sin anuncios',
+    'noticias de videojuegos sin anuncios',
+    'estrenos de anime',
+    'lanzamientos de videojuegos',
+    'novedades gaming',
+    'anime 2026',
   ],
+  openGraph: {
+    title: 'Noticias de Anime y Videojuegos | Isekai Respawn',
+    description:
+      'Estrenos, lanzamientos, eventos y novedades del mundo otaku y gamer.',
+    type: 'website',
+  },
 };
 
 export default function NoticiasPage() {
   return (
-    <div className={styles.noticiasWrap}>
+    <div className={styles.wrap}>
+      
       <nav className={styles.breadcrumb} aria-label="Ruta de navegación">
         <Link href="/">Inicio</Link>
-        <span className={styles.sep}>&gt;</span>
+        <span className={styles.sep}>/</span>
         <span className={styles.actual}>Noticias</span>
       </nav>
 
-      <h1 className={styles.tituloSeccion}>Noticias</h1>
-      <p className={styles.subtituloSeccion}>
-        Todo lo que necesitas saber sobre anime y videojuegos, en un solo lugar.
-      </p>
+      {/* Hero compacto */}
+      <header className={styles.hero}>
+        <span className={styles.eyebrow}>
+          <span aria-hidden="true"></span> ACTUALIDAD · SIN ANUNCIOS
+        </span>
+        <h1>
+        <span>Noticias de anime y videojuegos</span>
+        </h1>
+        <p>
+          Todo lo que pasa en el mundo del anime y los videojuegos, en un
+          solo lugar. Sin anuncios, sin rodeos.
+        </p>
+      </header>
 
-      <div className={styles.noticiasGrid}>
-        <article className={styles.noticia}>
-          <div className={styles.noticiaImg}>
-            <span>ANIME</span>
-          </div>
-          <div className={styles.noticiaBody}>
-            <h3>Noticias de Anime</h3>
-            <p>
-              Estrenos, temporadas, anuncios y todo lo que pasa en el mundo del
-              anime.
-            </p>
-            <Link href="/noticias/anime" className={styles.btnLeer}>
-              Ver noticias
-            </Link>
-          </div>
-        </article>
-
-        <article className={styles.noticia}>
-          <div className={styles.noticiaImg}>
-            <span>GAMING</span>
-          </div>
-          <div className={styles.noticiaBody}>
-            <h3>Noticias de Videojuegos</h3>
-            <p>
-              Lanzamientos, actualizaciones y eventos del mundo gamer.
-            </p>
-            <Link href="/noticias/videojuegos" className={styles.btnLeer}>
-              Ver noticias
-            </Link>
-          </div>
-        </article>
-      </div>
+     
+      <NoticiasClient />
     </div>
   );
 }

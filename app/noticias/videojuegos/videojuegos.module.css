@@ -1,11 +1,11 @@
-/* ===== Contenedor general ===== */
+
 .wrap {
   max-width: 900px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
 }
 
-/* ===== Breadcrumb (reutiliza estilo del sitio) ===== */
+
 .breadcrumb {
   font-size: 0.85rem;
   color: var(--texto-suave);
@@ -25,7 +25,7 @@
 .sep { opacity: 0.6; }
 .actual { color: var(--amarillo-claro); font-weight: 600; }
 
-/* ===== Encabezado ===== */
+
 .titulo {
   font-size: 2.2rem;
   color: var(--amarillo-claro);
@@ -44,14 +44,14 @@
   margin-bottom: 2.5rem;
 }
 
-/* ===== Lista de juegos ===== */
+
 .lista {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
 
-/* ===== Juego individual ===== */
+
 .juego {
   border-left: 4px solid var(--coral);
   padding-left: 1.2rem;
@@ -61,7 +61,7 @@
   border-color: var(--amarillo);
 }
 
-/* ===== Fila superior: título + fecha ===== */
+
 .juegoHeader {
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +83,7 @@
   white-space: nowrap;
 }
 
-/* ===== Plataformas ===== */
+
 .plataformas {
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +100,7 @@
   letter-spacing: 0.3px;
 }
 
-/* ===== Descripción ===== */
+
 .juegoDesc {
   color: var(--texto-suave);
   font-size: 0.95rem;
@@ -108,7 +108,7 @@
   margin: 0;
 }
 
-/* ===== Botón de enlace (opcional) ===== */
+
 .btn {
   display: inline-block;
   margin-top: 0.6rem;
@@ -125,7 +125,7 @@
   background-color: var(--amarillo);
 }
 
-/* ===== Mensaje vacío ===== */
+
 .vacio {
   text-align: center;
   padding: 3rem 1rem;
