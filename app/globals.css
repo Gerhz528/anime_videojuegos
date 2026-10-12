@@ -61,6 +61,25 @@ body {
   gap: 2rem;
 }
 
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .navbar a.nav-link {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.85rem;
+  }
+}
+
 .navbar a.nav-link {
   color: var(--amarillo);
   text-decoration: none;
