@@ -1,0 +1,654 @@
+/* ==========================================================================
+   ESTRUCTURA GENERAL Y CONTENEDOR
+   ========================================================================== */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 4rem;
+  color: var(--amarillo-claro, #efe291);
+}
+
+/* Breadcrumb / Navegación Superior */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave, #ecc36f);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: var(--amarillo, #ecc36f);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--coral, #e96c72);
+}
+
+.breadcrumb span {
+  opacity: 0.6;
+}
+
+/* Encabezado Principal */
+.gameHeading {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--coral, #e96c72);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.gameHeading h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+
+.gameHeading p {
+  font-size: 1.1rem;
+  color: var(--amarillo, #ecc36f);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SHOWCASE (PORTADA EN FORMATO PÓSTER VERTICAL)
+   ========================================================================== */
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  background: var(--azul-oscuro, #120b36);
+  border: 1px solid var(--azul-medio, #231958);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+@media (min-width: 820px) {
+  .showcase {
+    /* Mantiene un ancho de columna adecuado para el póster vertical */
+    grid-template-columns: 300px 1fr;
+    padding: 2rem;
+  }
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Portada modificada a relación vertical 3:4 */
+.cover {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--casi-negro, #09051d);
+  aspect-ratio: 3 / 4; /* Formato vertical tipo póster */
+  border: 1px solid var(--azul-medio, #231958);
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Badge de Puntuación sobre la portada */
+.badge {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background: rgba(8, 3, 38, 0.85);
+  border: 1px solid var(--coral, #e96c72);
+  color: var(--amarillo-claro, #efe291);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.visualCaption {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--coral, #e96c72);
+  font-weight: 600;
+}
+
+.visualCaption span:last-child {
+  color: var(--texto-suave, #ecc36f);
+}
+
+/* Ficha del Anime Lateral */
+.gameInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.gameInfo h2 {
+  font-size: 1.4rem;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0.2rem 0 0.75rem 0;
+}
+
+.gameInfo p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--texto-suave, #ecc36f);
+  margin-bottom: 1.5rem;
+}
+
+.gameInfo dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem 1rem;
+  border-top: 1px solid var(--azul-medio, #231958);
+  border-bottom: 1px solid var(--azul-medio, #231958);
+  padding: 1.25rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.gameInfo dt {
+  font-size: 0.68rem;
+  color: var(--coral, #e96c72);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.gameInfo dd {
+  font-size: 0.88rem;
+  color: var(--amarillo-claro, #efe291);
+  font-weight: 600;
+  margin: 0.25rem 0 0 0;
+}
+
+/* Botón Principal */
+.primary {
+  background-color: var(--coral, #e96c72);
+  color: var(--casi-negro, #120b36);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: 1px solid var(--coral, #e96c72);
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.primary:hover {
+  background-color: var(--amarillo, #ecc36f);
+  border-color: var(--amarillo, #ecc36f);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   BARRA PASOS / RECORRIDO
+   ========================================================================== */
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--azul-oscuro, #120b36);
+  border: 1px solid var(--azul-medio, #231958);
+  border-radius: 8px;
+  padding: 0.8rem 1.25rem;
+  margin-bottom: 2.5rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+.steps a {
+  color: var(--texto-suave, #ecc36f);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.steps a:hover {
+  color: var(--coral, #e96c72);
+}
+
+.steps span[aria-current="step"] {
+  color: var(--amarillo, #efe291);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   LAYOUT DEL ANÁLISIS & NAVEGACIÓN INTERNA
+   ========================================================================== */
+.analysisLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .analysisLayout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  background: var(--azul-oscuro, #120b36);
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--azul-medio, #231958);
+}
+
+.contents a {
+  color: var(--texto-suave, #ecc36f);
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.2s ease;
+}
+
+.contents a span {
+  font-size: 0.75rem;
+  color: var(--coral, #e96c72);
+  font-weight: 700;
+}
+
+.contents a:hover {
+  color: var(--amarillo-claro, #efe291);
+}
+
+.backLink {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--azul-medio, #231958);
+  color: var(--coral, #e96c72) !important;
+  font-weight: 700;
+}
+
+/* Cuerpo de las Secciones del Análisis */
+.analysisBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--amarillo-claro, #efe291);
+  background: rgba(35, 25, 88, 0.4);
+  padding: 1.5rem;
+  border-left: 4px solid var(--coral, #e96c72);
+  border-radius: 0 12px 12px 0;
+}
+
+.lead p {
+  margin: 0;
+}
+
+.analysisSection {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--coral, #e96c72);
+}
+
+.analysisSection h2 {
+  font-size: 1.35rem;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0 0 0.5rem 0;
+}
+
+.analysisSection p {
+  color: var(--texto-suave, #ecc36f);
+  line-height: 1.7;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* ==========================================================================
+   PROS & CONSIDERACIONES (BALANCE)
+   ========================================================================== */
+.balance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.balance section {
+  background: var(--azul-oscuro, #120b36);
+  border: 1px solid var(--azul-medio, #231958);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.balance h2 {
+  font-size: 1.05rem;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.balance ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.balance li {
+  font-size: 0.85rem;
+  color: var(--texto-suave, #ecc36f);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.balance li::before {
+  content: "•";
+  color: var(--coral, #e96c72);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   VEREDICTO Y SIGUIENTE PARADA
+   ========================================================================== */
+.verdict {
+  background: var(--azul-oscuro, #120b36);
+  border: 1px solid var(--azul-medio, #231958);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.verdict h2 {
+  font-size: 1.4rem;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+.verdict p {
+  color: var(--texto-suave, #ecc36f);
+  line-height: 1.7;
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+
+.verdictScoreRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--azul-medio, #231958);
+  padding-top: 1rem;
+}
+
+.verdictScoreRow span {
+  font-size: 0.75rem;
+  color: var(--coral, #e96c72);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.verdictScoreRow strong {
+  font-size: 1.5rem;
+  color: var(--amarillo-claro, #efe291);
+}
+
+.nextStop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: var(--azul-oscuro, #120b36);
+  border: 1px solid var(--azul-medio, #231958);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.nextStop h2 {
+  font-size: 1.3rem;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0.25rem 0;
+}
+
+.nextStop p {
+  color: var(--texto-suave, #ecc36f);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .wrap {
+    padding: 1rem 1rem 3rem;
+  }
+  .showcase {
+    padding: 1.25rem;
+  }
+  .primary {
+    width: 100%;
+  }
+  .nextStop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
+   ENCABEZADO PRINCIPAL (GAME HEADING - ESTILO ARCADE/ANIME)
+   ========================================================================== */
+.gameHeading {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding: 2rem 2.2rem;
+  background: radial-gradient(ellipse at 90% 10%, rgba(49, 37, 120, 0.45), transparent 60%),
+              linear-gradient(135deg, rgba(8, 3, 38, 0.9), var(--azul-oscuro, #120b36));
+  border: 1px solid var(--azul-medio, #231958);
+  border-left: 4px solid var(--coral, #e96c72);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* Efecto de cuadrícula translúcida de fondo */
+.gameHeading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: linear-gradient(#ecc36f06 1px, transparent 1px),
+                    linear-gradient(90deg, #ecc36f06 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.headingBadgeRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.headingBadgeRow .eyebrow {
+  margin-bottom: 0;
+}
+
+.headingBadgeRow .eyebrow > span {
+  color: var(--coral, #e96c72);
+  margin-right: 0.35rem;
+}
+
+.statusBadge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--casi-negro, #080326);
+  background: var(--amarillo, #ecc36f);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.gameHeading h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0.4rem 0 1rem 0;
+  text-shadow: 3px 3px 0 rgba(201, 62, 113, 0.35), 0 0 20px rgba(239, 226, 145, 0.15);
+}
+
+/* Divisor Animado */
+.headingDivider {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  height: 24px;
+  margin: 0.8rem 0 1.2rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.puntosAnime {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--coral, #e96c72) 0px,
+    var(--coral, #e96c72) 6px,
+    transparent 6px,
+    transparent 18px
+  );
+  opacity: 0.4;
+}
+
+.recorridoAnime {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.shuriken {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  color: var(--amarillo, #ecc36f);
+  filter: drop-shadow(0 0 6px var(--amarillo, #ecc36f));
+  animation: desplazarShuriken 4s infinite linear, girarShuriken 1.5s infinite linear;
+}
+
+.esferaMagica {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, var(--amarillo-claro, #efe291) 30%, var(--coral, #e96c72) 100%);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 8px var(--coral, #e96c72);
+  animation: desplazarEsfera 4s infinite linear;
+}
+
+@keyframes desplazarShuriken {
+  0% { left: -30px; }
+  100% { left: 100%; }
+}
+
+@keyframes desplazarEsfera {
+  0% { left: -50px; }
+  100% { left: 92%; }
+}
+
+@keyframes girarShuriken {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Caja del Eslogan / Titular de Reseña */
+.quoteBox {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0.9rem 1.2rem;
+  background: rgba(8, 3, 38, 0.6);
+  border: 1px dashed rgba(236, 195, 111, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.quoteIcon {
+  font-size: 2rem;
+  line-height: 0.8;
+  color: var(--coral, #e96c72);
+  font-family: Georgia, serif;
+  user-select: none;
+}
+
+.quoteBox p {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--amarillo, #ecc36f);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .gameHeading {
+    padding: 1.25rem 1rem;
+  }
+  .quoteBox {
+    padding: 0.75rem 0.9rem;
+  }
+}

@@ -1,0 +1,340 @@
+
+.wrap {
+  min-height: 100vh;
+  background-color: #080326;
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: #efe291;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ecc36f;
+  text-decoration: underline;
+}
+
+.topHeader {
+  border: 2px solid #312678;
+  background-color: #180f44;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.topHeader h1 {
+  margin: 0;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ecc36f;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detailCard {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.posterWrapper {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 2 / 3; /* Mantiene la proporción vertical exacta de póster */
+  border: 2px solid #312678;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #180f44;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  margin: 0 auto;
+}
+
+.posterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que la imagen se estire, deforme o pierda resolución */
+  display: block;
+  image-rendering: -webkit-optimize-contrast; /* Forzado de nitidez en renderizado */
+  image-rendering: crisp-edges;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.animeTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* BLOQUES DE SECCIÓN */
+.sectionBlock {
+  border-bottom: 1px dashed #312678;
+  padding-bottom: 1.25rem;
+}
+
+.sectionBlock h3 {
+  font-size: 1.1rem;
+  color: #e96c72;
+  text-transform: lowercase;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.sectionBlock p {
+  color: #d1d5db;
+  line-height: 1.65;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* METADATOS Y LISTA DE INFORMACIÓN */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.metaLabel {
+  color: #efe291;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.metaValue {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.infoBlock h4 {
+  color: #e96c72;
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem 0;
+  text-transform: lowercase;
+  font-weight: 700;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem 1.5rem;
+  font-size: 0.925rem;
+  color: #9ca3af;
+}
+
+.infoList strong {
+  color: #efe291;
+  font-weight: 600;
+}
+
+/* BLOQUE DE RESEÑA */
+.reviewText {
+  color: #e2e8f0 !important;
+  font-style: italic;
+  background-color: rgba(24, 15, 68, 0.6);
+  padding: 1.1rem 1.25rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #e96c72;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 850px) {
+  .detailCard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .posterWrapper {
+    max-width: 280px;
+  }
+
+  .animeTitle {
+    font-size: 1.85rem;
+    text-align: center;
+  }
+
+  .topHeader h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Estilo del botón rosa / coral en línea */
+.primary {
+  background-color: #e96c72; /* Tono rosa/coral de tu diseño */
+  color: #120b36;            /* Texto e ícono azul oscuro */
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.primary:hover {
+  background-color: #f07b81;
+  transform: translateY(-1px);
+}
+
+/* Formato del texto de la reseña para mantener buena legibilidad */
+.reviewText {
+  color: #ecc36f; /* Tono dorado/amarillo suave del texto */
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   TOP HEADER (BIENVENIDO AL MUNDO ANIME - ESTILO RETRO/ARCADE)
+   ========================================================================== */
+.topHeader {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--azul-medio, #231958);
+  border-radius: 12px;
+  background: radial-gradient(ellipse at 85% 20%, #31257899, transparent 55%),
+              linear-gradient(135deg, var(--casi-negro, #080326), var(--azul-oscuro, #120b36));
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Red de cuadrícula cibernética de fondo */
+.topHeader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(#ecc36f08 1px, transparent 1px),
+                    linear-gradient(90deg, #ecc36f08 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+
+/* Líneas diagonales decorativas */
+.topHeader::after {
+  content: '';
+  position: absolute;
+  inset: auto -10% 0 40%;
+  height: 40%;
+  z-index: -1;
+  border-top: 1px solid #c93e7155;
+  background: repeating-linear-gradient(90deg, transparent 0 58px, #c93e7122 58px 60px);
+  transform: skewX(-30deg);
+}
+
+.topHeaderContent {
+  padding: 2.5rem 2.5rem 2rem;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: entrada 0.7s ease-out both;
+}
+
+.topHeaderContent .eyebrow {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--coral, #e96c72);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.topHeaderContent .eyebrow > span {
+  color: var(--coral, #e96c72);
+  margin-right: 0.35rem;
+}
+
+.topHeader h1 {
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+  margin: 0.4rem 0 0.8rem 0;
+  color: var(--amarillo-claro, #efe291);
+  text-shadow: 3px 3px 0 rgba(201, 62, 113, 0.4), 0 0 15px rgba(239, 226, 145, 0.2);
+  text-transform: uppercase;
+}
+
+.topHeader h1 > span {
+  color: var(--amarillo, #ecc36f);
+}
+
+.topHeader p {
+  color: var(--texto-suave, #ecc36f);
+  max-width: 580px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Pie del banner superior */
+.topHeaderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 0.75rem 2.5rem;
+  border-top: 1px solid var(--azul-medio, #231958);
+  background: rgba(8, 3, 38, 0.5);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--texto-suave, #ecc36f);
+  font-weight: 700;
+}
+
+.topHeaderFooter span:first-child {
+  color: var(--coral, #e96c72);
+}
+
+@media (max-width: 560px) {
+  .topHeaderContent {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+  .topHeaderFooter {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.55rem;
+  }
+  .topHeaderFooter span:last-child {
+    display: none;
+  }
+}

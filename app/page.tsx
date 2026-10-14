@@ -33,6 +33,8 @@ export default function Home() {
             <span className="btn">Ver más</span>
           </Link>
 
+
+
           <Link href="/anime/resenas" className="card card-link">
             <div className="card-img">RESEÑAS</div>
             <h3>Reseñas</h3>

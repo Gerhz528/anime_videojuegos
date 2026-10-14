@@ -1,0 +1,571 @@
+/* ==========================================
+   ESTRUCTURA GENERAL Y BREADCRUMB
+   ========================================== */
+.wrap { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 1.5rem 1.5rem 0; 
+}
+
+.breadcrumb { 
+  display: flex; 
+  gap: .65rem; 
+  color: var(--texto-suave); 
+  font-size: .85rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.breadcrumb a { 
+  color: var(--amarillo); 
+  text-decoration: none; 
+}
+
+.breadcrumb a:hover { 
+  color: var(--coral); 
+}
+
+/* ==========================================
+   HERO / BANNER PRINCIPAL
+   ========================================== */
+.hero { 
+  position: relative; 
+  isolation: isolate; 
+  overflow: hidden; 
+  border: 1px solid var(--azul-medio); 
+  border-radius: 12px; 
+  background: radial-gradient(ellipse at 85% 20%, #31257899, transparent 55%), linear-gradient(135deg, var(--casi-negro), var(--azul-oscuro)); 
+}
+
+.hero::before { 
+  content: ''; 
+  position: absolute; 
+  inset: 0; 
+  z-index: -1; 
+  background-image: linear-gradient(#ecc36f08 1px, transparent 1px), linear-gradient(90deg, #ecc36f08 1px, transparent 1px); 
+  background-size: 42px 42px; 
+  mask-image: linear-gradient(90deg, transparent, #000); 
+}
+
+.hero::after { 
+  content: ''; 
+  position: absolute; 
+  inset: auto -10% 0 40%; 
+  height: 40%; 
+  z-index: -1; 
+  border-top: 1px solid #c93e7155; 
+  background: repeating-linear-gradient(90deg, transparent 0 58px, #c93e7122 58px 60px); 
+  transform: skewX(-30deg); 
+}
+
+.heroContent { 
+  padding: 4rem 3rem 3rem; 
+  position: relative; 
+  animation: entrada .7s ease-out both; 
+}
+
+.eyebrow { 
+  font-size: .7rem; 
+  font-weight: 700; 
+  letter-spacing: .16em; 
+  color: var(--coral); 
+}
+
+.eyebrow > span { 
+  margin-right: .5rem; 
+  color: var(--coral);
+}
+
+.hero h1 { 
+  font-size: clamp(2.4rem, 8vw, 5.5rem); 
+  line-height: 1.1; 
+  letter-spacing: -.055em; 
+  font-weight: 800; 
+  margin: 1.1rem 0; 
+  color: var(--amarillo-claro); 
+  text-shadow: 4px 4px 0 #c93e7144; 
+  text-transform: uppercase;
+}
+
+.hero h1 > span { 
+  color: var(--amarillo); 
+}
+
+.hero p { 
+  color: var(--texto-suave); 
+  max-width: 530px; 
+  line-height: 1.8; 
+  font-size: 1rem; 
+}
+
+.heroActions { 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 1.25rem; 
+  margin-top: 1.6rem; 
+}
+
+.primary { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: .8rem; 
+  background: var(--coral); 
+  color: var(--casi-negro); 
+  border: 1px solid var(--coral); 
+  padding: .8rem 1.25rem; 
+  border-radius: 8px; 
+  text-decoration: none; 
+  font-size: .9rem; 
+  font-weight: 700; 
+  cursor: pointer; 
+  transition: transform .2s, background-color .2s; 
+}
+
+.primary:hover { 
+  background: var(--amarillo); 
+  transform: translateY(-2px); 
+}
+
+.heroFooter { 
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+  gap: .8rem; 
+  padding: 1rem 3rem; 
+  border-top: 1px solid var(--azul-medio); 
+  background: #08032655; 
+  font-size: .65rem; 
+  letter-spacing: .12em; 
+  color: var(--texto-suave); 
+}
+
+.heroFooter span:first-child { 
+  color: var(--coral); 
+}
+
+/* ==========================================
+   NAVEGACIÓN DE PASOS / STEPS
+   ========================================== */
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0 1rem;
+  padding: .8rem 1.2rem;
+  background: var(--azul-oscuro);
+  border: 1px solid var(--azul-medio);
+  border-radius: 8px;
+  font-size: .85rem;
+}
+
+.steps a {
+  color: var(--texto-suave);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.steps a:hover {
+  color: var(--coral);
+}
+
+.steps span[aria-current="step"] {
+  color: var(--amarillo);
+  font-weight: 700;
+}
+
+/* ==========================================
+   ANIMACIÓN ESTILO ANIME
+   ========================================== */
+.animeAnimacion {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 32px;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.puntosAnime {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    #e96c72 0px,
+    #e96c72 6px,
+    transparent 6px,
+    transparent 18px
+  );
+  opacity: 0.5;
+}
+
+.recorridoAnime {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.shuriken {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  color: #ecc36f;
+  filter: drop-shadow(0 0 6px #ecc36f);
+  animation: desplazarShuriken 4s infinite linear, girarShuriken 1.5s infinite linear;
+}
+
+.esferaMagica {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #efe291 30%, #e96c72 100%);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 10px #e96c72, 0 0 20px #e96c72;
+  animation: desplazarEsfera 4s infinite linear;
+}
+
+@keyframes desplazarShuriken {
+  0% { left: -30px; }
+  100% { left: 100%; }
+}
+
+@keyframes desplazarEsfera {
+  0% { left: -60px; }
+  100% { left: 92%; }
+}
+
+@keyframes girarShuriken {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   SECCIONES Y ENCABEZADOS
+   ========================================== */
+.seccion {
+  margin-top: 2.5rem;
+}
+
+.heading { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 2rem; 
+  margin-bottom: 1.8rem; 
+}
+
+.heading h2 { 
+  margin: .6rem 0 .7rem; 
+  padding-left: .8rem; 
+  border-left: 4px solid var(--coral); 
+  font-size: clamp(1.4rem, 3vw, 1.8rem); 
+  color: var(--amarillo); 
+}
+
+.heading p { 
+  font-size: .9rem; 
+  line-height: 1.6; 
+  color: var(--texto-suave); 
+}
+
+/* ==========================================
+   GRID Y TARJETAS DE MEMES
+   ========================================== */
+.grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 1.5rem; 
+}
+
+.card { 
+  min-width: 0; 
+  display: flex; 
+  flex-direction: column; 
+  border: 1px solid var(--azul-medio); 
+  border-radius: 12px; 
+  overflow: hidden; 
+  background: var(--azul-oscuro); 
+  transition: transform .2s, border-color .2s, box-shadow .2s; 
+}
+
+.card:hover { 
+  transform: translateY(-4px); 
+  border-color: var(--coral); 
+  box-shadow: 0 8px 20px #c93e712f; 
+}
+
+.cover { 
+  position: relative; 
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  background: var(--casi-negro); 
+  overflow: hidden; 
+}
+
+.cover img { 
+  position: absolute; 
+  inset: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center; 
+  transition: transform .3s; 
+}
+
+.card:hover .cover img { 
+  transform: scale(1.035); 
+}
+
+.cardBody { 
+  padding: 1.2rem; 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+.cardBody h3 { 
+  font-size: 1.05rem; 
+  color: var(--amarillo-claro); 
+  line-height: 1.4; 
+  margin-bottom: 1rem; 
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--azul-medio);
+  padding-top: .8rem;
+  margin-top: auto;
+}
+
+.likes {
+  font-size: .78rem;
+  color: #ecc36f;
+  font-weight: 600;
+}
+
+.shareBtn {
+  background: transparent;
+  border: 1px solid var(--azul-medio);
+  color: var(--amarillo-claro);
+  padding: .4rem .8rem;
+  border-radius: 6px;
+  font: inherit;
+  font-size: .75rem;
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background-color .2s;
+}
+
+.shareBtn:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+  background: rgba(201, 62, 113, 0.1);
+}
+
+/* ==========================================
+   SECCIÓN FIN DEL RECORRIDO (NEXT STOP)
+   ========================================== */
+.nextStop {
+  margin-top: 4rem;
+  padding: 2.5rem;
+  border: 1px solid var(--azul-medio);
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--casi-negro));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nextStop h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--amarillo);
+  margin: .4rem 0;
+}
+
+.nextStop p {
+  color: var(--texto-suave);
+  font-size: .88rem;
+  max-width: 500px;
+}
+
+/* ==========================================
+   CRÉDITOS Y ANIMACIONES
+   ========================================== */
+.credit { 
+  font-size: .7rem; 
+  line-height: 1.7; 
+  color: var(--texto-suave); 
+  margin-top: 2.5rem; 
+  padding-bottom: 2rem;
+}
+
+@keyframes entrada { 
+  from { opacity: 0; transform: translateY(12px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+/* ==========================================
+   RESPONSIVO (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 900px) { 
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } 
+  .heroContent { padding: 3rem 2rem; } 
+  .heroFooter { padding: 1rem 2rem; } 
+  .nextStop { padding: 2rem; }
+}
+
+@media (max-width: 560px) { 
+  .wrap { padding: 1rem; } 
+  .heroContent { padding: 2.5rem 1.25rem 2rem; } 
+  .hero h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); } 
+  .hero p { font-size: .9rem; } 
+  .eyebrow { font-size: .6rem; letter-spacing: .1em; } 
+  .heroFooter { padding: 1rem 1.25rem; font-size: .55rem; } 
+  .heroFooter span:last-child { display: none; } 
+  .steps { flex-wrap: wrap; gap: .8rem; font-size: .78rem; }
+  .grid { grid-template-columns: 1fr; } 
+  .nextStop { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) { 
+  .heroContent, .card, .cover img, .primary { transition: none; animation: none; } 
+  .card:hover, .primary:hover { transform: none; } 
+}
+
+/* ==========================================
+   BOTÓN Y OVERLAY DE IMAGEN EN LA TARJETA
+   ========================================== */
+.coverButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+
+.zoomHint {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(8, 3, 38, 0.85);
+  border: 1px solid var(--coral, #e96c72);
+  color: var(--amarillo-claro, #efe291);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.coverButton:hover .zoomHint,
+.coverButton:focus-visible .zoomHint {
+  opacity: 1;
+}
+
+/* ==========================================
+   MODAL DE MEME EN TAMAÑO REAL
+   ========================================== */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(8, 3, 38, 0.88);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalContent {
+  position: relative;
+  background: var(--azul-oscuro, #120b36);
+  border: 1px solid var(--azul-medio, #231958);
+  border-radius: 12px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+  background: var(--casi-negro, #080326);
+  border: 1px solid var(--coral, #e96c72);
+  color: var(--coral, #e96c72);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.closeBtn:hover {
+  background: var(--coral, #e96c72);
+  color: var(--casi-negro, #080326);
+  transform: scale(1.1);
+}
+
+.modalImageWrapper {
+  overflow: auto;
+  max-height: calc(85vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  padding: 0.5rem;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 75vh;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.modalHeader {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--azul-medio, #231958);
+  background: var(--azul-oscuro, #120b36);
+}
+
+.modalHeader h3 {
+  font-size: 1.1rem;
+  color: var(--amarillo-claro, #efe291);
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
