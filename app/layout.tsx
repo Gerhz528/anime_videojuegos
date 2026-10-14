@@ -6,7 +6,8 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Isikai Respawn | Noticias, Novedades y Humor',
   description: 'Tu portal a nuevos mundos.',
-    keywords: ['anime', 'videojuegos', 'novedades','noticias','shonen','playstation','nintendo','xbox'],
+    keywords: ['anime', 'videojuegos', 'novedades','noticias','shonen','playstation','nintendo','xbox', 'one piece','dragon ball',
+    'naruto','shonen jump'],
     openGraph: {
       type: 'website',
       title: `Isikai Respawn`,
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </nav>
       <main>{children}</main>
       <footer className="footer">
-        © 2026 Isikai Respawn — Todos los derechos reservados.
+        © 2026 Isikai Respawn — "Tu portal a nuevos mundos"
       </footer>
       </body>
       </html>

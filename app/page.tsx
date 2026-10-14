@@ -1,5 +1,9 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
+export const metadata = {
+  keyword:['Memes' , 'anime', 'animes','videojuegos','reseñas de videojuegos', 'reseñas de animes',]
+}
 export default function Home() {
   return (
     <div className="container">
@@ -61,7 +65,7 @@ export default function Home() {
               <img src="/informacion_anime.jpg" alt="Informacion Anime"/>
             </div>
             <h3>Información</h3>
-            <p>Fichas, datos y curiosidades del mundo del anime.</p>
+            <p>Fichas, datos del mundo del anime.</p>
             <span className="btn">Ver más</span>
           </Link>
 
@@ -83,7 +87,7 @@ export default function Home() {
               <img src="/mim.jpeg" alt="Memes Anime" className="meme"/>
             </div>
             <h3>Memes</h3>
-            <p>Humor otaku en su máxima expresión.</p>
+            <p>¿Es esto otra Jojo referencia?</p>
             <span className="btn">Ver más</span>
           </Link>
 
