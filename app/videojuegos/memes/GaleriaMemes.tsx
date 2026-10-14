@@ -67,7 +67,7 @@ export default function GaleriaMemes() {
             </div>
 
             <p className={styles.note}>
-                Memes originales de Isekai Respawn. Toca cualquiera para ampliarlo.
+                Toca cualquiera para ampliarlo.
             </p>
 
             <div className={styles.filters} aria-label="Filtrar memes">

@@ -7,8 +7,8 @@ import memesStyles from './memes.module.css';
 export const metadata: Metadata = {
     title: 'Memes de videojuegos | Isekai Respawn',
     description: 'Memes en español de juegos clásicos, actuales y la vida gamer.',
-    keywords:['memes','videojuegos','memes de videojuegos','memes graciosos de videojuegos','memes de mario',
-    'random', 'memes XD'],
+    keywords: ['memes', 'videojuegos', 'memes de videojuegos', 'memes graciosos de videojuegos', 'memes de mario',
+        'random', 'memes XD'],
 };
 
 export default function MemesPage() {
@@ -18,7 +18,7 @@ export default function MemesPage() {
             href="/videojuegos">Videojuegos</Link><span>/</span><span>Memes</span></nav>
         <header className={`${styles.intro} ${memesStyles.hero}`}>
             <div className={memesStyles.orbit} aria-hidden="true"><span>+1</span><span>GG</span><span>XP</span></div>
-            <span className={styles.eyebrow}>03 / MEMES · HUMOR GAMER</span><h1>La próxima partida es reír.</h1><p>Una
+            <span className={styles.eyebrow}>03 / MEMES · HUMOR GAMER</span><h1>"Memes... the DNA of the soul"</h1><p>Una
             pausa entre partidas. Para quienes conocen el dolor de perder el progreso… y aun así vuelven a jugar.</p>
             <nav className={styles.steps} aria-label="Apartados de videojuegos"><Link href="/videojuegos/informacion">01
                 Información</Link><Link href="/videojuegos/resenas">02 Reseñas</Link><span
