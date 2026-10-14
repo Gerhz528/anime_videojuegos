@@ -4,6 +4,10 @@ import { useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './memes.module.css';
 
+export const metadata = {
+    keyword:['Memes', 'videojuegos','memes de videojuegos', ]
+}
+
 const filtros = ['Todos', 'random', 'XD', 'meme'];
 
 const memes = [
