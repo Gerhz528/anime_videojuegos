@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { memesAnime, type MemeAnime } from './memes'; // Ajusta la ruta a tus datos
