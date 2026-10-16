@@ -11,7 +11,7 @@ export const metadata = {
 const filtros = ['Todos', 'random', 'XD', 'meme'];
 
 const memes = [
-    { titulo: 'XD',                categoria: 'XD',   icono: 'sol' },
+    { titulo: 'Yo leyendo las cosas de la chamba',                categoria: 'XD',   icono: 'sol' },
     { titulo: 'Guayaba',          categoria: 'random',   icono: 'vida' },
     { titulo: 'Pero qué',                     categoria: 'Vida gamer',   icono: 'pocion' },
     { titulo: 'Mariobros',         categoria: 'meme',     icono: 'bloques' },
@@ -21,7 +21,7 @@ const memes = [
 
 type Meme = typeof memes[number];
 
-// 🔑 Un mapa de icono → ruta de imagen
+
 const imagenes: Record<string, string> = {
     sol:      '/imagenes/videojuegos_memes/1.jpeg',
     vida:     '/imagenes/videojuegos_memes/2.jpeg',
@@ -129,7 +129,7 @@ export default function GaleriaMemes() {
 
                 <Lamina meme={seleccionado} />
                 <h2 id="meme-titulo">{seleccionado.titulo}</h2>
-                <p className={styles.note}>{seleccionado.categoria} · Meme original</p>
+                <p className={styles.note}>{seleccionado.categoria} </p>
 
                 <div className={styles.controls}>
                     <button onClick={() => mover(-1)}>← Anterior</button>

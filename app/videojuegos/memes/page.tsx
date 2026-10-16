@@ -18,8 +18,8 @@ export default function MemesPage() {
             href="/videojuegos">Videojuegos</Link><span>/</span><span>Memes</span></nav>
         <header className={`${styles.intro} ${memesStyles.hero}`}>
             <div className={memesStyles.orbit} aria-hidden="true"><span>+1</span><span>GG</span><span>XP</span></div>
-            <span className={styles.eyebrow}>03 / MEMES · HUMOR GAMER</span><h1>"Memes... the DNA of the soul"</h1><p>Una
-            pausa entre partidas. Para quienes conocen el dolor de perder el progreso… y aun así vuelven a jugar.</p>
+            <span className={styles.eyebrow}>03 / MEMES · HUMOR GAMER</span><h1>"Memes... the DNA of the soul"</h1><p>
+            </p>
             <nav className={styles.steps} aria-label="Apartados de videojuegos"><Link href="/videojuegos/informacion">01
                 Información</Link><Link href="/videojuegos/resenas">02 Reseñas</Link><span
                 aria-current="page">03 Memes</span></nav>

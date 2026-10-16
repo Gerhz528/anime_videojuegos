@@ -2,30 +2,34 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from 'next/link';
-
+/*
+* Esto es lo que tendrá cada pagina que hagan por defecto, en cada pagina individual pueden agregarle más si es necesario
+* Todo esto se importa automaticamente a cada HTML que hagan
+* */
 export const metadata = {
-  title: 'Isikai Respawn | Noticias, Novedades y Humor',
+  title: 'Isekai Respawn | Noticias, Novedades y Memes',
   description: 'Tu portal a nuevos mundos.',
-    keywords: ['anime', 'videojuegos', 'novedades','noticias','shonen','playstation','nintendo','xbox', 'one piece','dragon ball',
-    'naruto','shonen jump'],
+    keywords: ['anime', 'videojuegos', 'novedades','noticias','shonen','playstation 5','nintendo','xbox series' +
+    'noticias de anime sin anuncios', 'noticias de videojuegos sin anuncios', 'memes graciosos de anime', 'memes de videojuegos'],
     openGraph: {
       type: 'website',
-      title: `Isikai Respawn`,
+      title: `Isekai Respawn`,
       description: `Tu portal a nuevos mundos.`,
-      images:['https://pixabay.com/es/images/download/pen_ash-snow-10476274_1920.jpg'],
+      images:[{
+          url:'',
+          alt: 'Imagen de isekai respawn',
+      }],
+      url:'',
     },
-    whatsapp: {
-        type: 'website',
-        title: `Isikai Respawn`,
-        description: `Tu portal a nuevos mundos.`,
-        images:['https://pixabay.com/es/images/download/pen_ash-snow-10476274_1920.jpg'],
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Isekai Respawn',
+        description: 'Tu portal a nuevos mundos.',
+        images: ['https://tusitio.com/imagen_principal.jpg'],
     },
-    instagram: {
-        type: 'website',
-        title: `Isikai Respawn`,
-        description: `Tu portal a nuevos mundos.`,
-        images:['https://pixabay.com/es/images/download/pen_ash-snow-10476274_1920.jpg'],
-    }
+
+
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -39,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Link href="/anime" className="nav-link">Anime</Link>
           <Link href="/videojuegos" className="nav-link">Videojuegos</Link>
           <Link href="/noticias" className="nav-link">Noticias</Link>
+            <Link href="/contacto" className="nav-link">Contacto</Link>
         </div>
       </nav>
       <main>{children}</main>

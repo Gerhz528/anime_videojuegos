@@ -87,7 +87,7 @@ export default function Home() {
               <img src="/mim.jpeg" alt="Memes Anime" className="meme"/>
             </div>
             <h3>Memes</h3>
-            <p>¿Es esto otra Jojo referencia?</p>
+            <p>¿Es esto una Jojo referencia?</p>
             <span className="btn">Ver más</span>
           </Link>
 
