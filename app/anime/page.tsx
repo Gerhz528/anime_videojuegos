@@ -23,6 +23,8 @@ const categoriasGeneros = [
   'Gore',
 ];
 
+
+
 export default function CatalogoAnime() {
   const [filtroGeneral, setFiltroGeneral] = useState<'Todos' | 'Populares'>('Todos');
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState<string>('Todas las categorías');

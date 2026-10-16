@@ -9,6 +9,25 @@ import styles from './resenas.module.css';
 export const metadata: Metadata = {
   title: 'Reseñas de videojuegos | Isekai Respawn',
   description: 'Explora nuestras reseñas editoriales de videojuegos recientes y clásicos. Jugabilidad, historia, arte y veredicto sin spoilers.',
+
+    keywords: ['anime', 'memes de anime sin anuncios', 'memes de anime 2026', 'memes graciosos de anime'],
+    openGraph: {
+        type: 'website',
+        title: `Isekai Respawn`,
+        description: `Tu portal a nuevos mundos.`,
+        images:[{
+            url:'/imagen_principal_inde.jpg',
+            alt: 'Imagen de isekai respawn',
+        }],
+        url:'/videojuegos/resenas',
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Isekai Respawn',
+        description: 'Tu portal a nuevos mundos.',
+        images: ['/imagen_principal_inde.jpg'],
+    },
 };
 
 export default function ResenasPage() {

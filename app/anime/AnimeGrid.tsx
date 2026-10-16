@@ -10,6 +10,29 @@ interface AnimeGridProps {
   animes: Anime[];
 }
 
+export const metadata = {
+  title: 'Reseñas de anime',
+  description: 'Tu portal a nuevos mundos.',
+  keywords: ['anime', 'reseñas de anime', 'reseñas de anime 2026', 'reseñas de anime sin anuncios'],
+  openGraph: {
+    type: 'website',
+    title: `Isekai Respawn`,
+    description: `Tu portal a nuevos mundos.`,
+    images:[{
+      url:'/imagen_principal_inde.jpg',
+      alt: 'Imagen de isekai respawn',
+    }],
+    url:'/anime/resenas',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Isekai Respawn',
+    description: 'Tu portal a nuevos mundos.',
+    images: ['/imagen_principal_inde.jpg'],
+  },
+};
+
 export default function AnimeGrid({ animes }: AnimeGridProps) {
   const [imagenesFallidas, setImagenesFallidas] = useState<string[]>([]);
 

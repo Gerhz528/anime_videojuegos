@@ -14,8 +14,11 @@ interface Props {
 export default function ResenaAnimePage({ params }: Props) {
   const { id } = use(params);
 
+
   // Busca el anime cuyo ID coincida con la URL
   const anime = animes.find((item) => item.id === id);
+
+
 
   if (!anime) {
     notFound();

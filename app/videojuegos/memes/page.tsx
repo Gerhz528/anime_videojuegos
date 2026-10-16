@@ -9,6 +9,23 @@ export const metadata: Metadata = {
     description: 'Memes en español de juegos clásicos, actuales y la vida gamer.',
     keywords: ['memes', 'videojuegos', 'memes de videojuegos', 'memes graciosos de videojuegos', 'memes de mario',
         'random', 'memes XD'],
+    openGraph: {
+        type: 'website',
+        title: `Isekai Respawn`,
+        description: `Tu portal a nuevos mundos.`,
+        images:[{
+            url:'/imagen_principal_inde.jpg',
+            alt: 'Imagen de isekai respawn',
+        }],
+        url:'/videojuegos/memes',
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Isekai Respawn',
+        description: 'Tu portal a nuevos mundos.',
+        images: ['/imagen_principal_inde.jpg'],
+    },
 };
 
 export default function MemesPage() {
