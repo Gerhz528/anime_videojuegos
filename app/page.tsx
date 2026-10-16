@@ -16,7 +16,7 @@ export default function Home() {
           className="hero-img"
         />
         <div className="hero-overlay">
-          <h1>Isikai Respawn</h1>
+          <h1>Isekai Respawn</h1>
           <p>Tu portal a nuevos mundos.</p>
           <div className="hero-botones">
             <a href="/anime" className="btn-hero">Explorar Anime</a>
