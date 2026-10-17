@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 /*
  * Esto es lo que tendrá cada pagina que hagan por defecto, en cada pagina individual pueden agregarle más si es necesario
  * Todo esto se importa automaticamente a cada HTML que hagan
@@ -68,8 +69,8 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <nav className="navbar">
-          <Link href="/" className="logo">
-            Isekai Respawn
+          <Link href="/" className="logo" aria-label="Isekai Respawn - Inicio">
+            <Image src="/logo-pagina.png" alt="Isekai Respawn" width={1672} height={941} sizes="180px" className="navbar-logo" preload />
           </Link>
           <div className="nav-links">
             <Link href="/" className="nav-link">

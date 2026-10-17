@@ -49,11 +49,23 @@ body {
 }
 
 .navbar .logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--amarillo-claro);
-  letter-spacing: 1px;
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 180px;
+  height: 36px;
   text-decoration: none;
+}
+
+.navbar .navbar-logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .navbar .nav-links {
