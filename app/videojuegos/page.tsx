@@ -1,30 +1,13 @@
+import { crearMetadataVideojuegos } from './metadata';
 import type { Metadata } from 'next';
 import Catalogo from './Catalogo';
 
-export const metadata: Metadata = {
-  title: 'Videojuegos | Isekai Respawn',
-  description: 'Explora videojuegos recientes y clásicos. Descubre historias, géneros y nuevos mundos en nuestro catálogo.',
-
-  keywords: ['videojuegos','noticias de videojuegos sin anuncios', 'videojuegos 2026' ],
-  openGraph: {
-    type: 'website',
-    title: `Isekai Respawn`,
-    description: `Tu portal a nuevos mundos.`,
-    images:[{
-      url:'/imagen_principal_inde.jpg',
-      alt: 'Imagen de isekai respawn',
-    }],
-    url:'/videojuegos',
-  },
-
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Isekai Respawn',
-    description: 'Tu portal a nuevos mundos.',
-    images: ['/imagen_principal_inde.jpg'],
-  },
-
-};
+export const metadata: Metadata = crearMetadataVideojuegos({
+  titulo: 'Videojuegos recientes y clásicos',
+  descripcion: 'Descubre videojuegos recientes y clásicos para PC: géneros, historias y desarrolladores. Explora el catálogo y encuentra reseñas y valoraciones de jugadores.',
+  ruta: '/videojuegos',
+  palabrasClave: ['videojuegos', 'videojuegos para PC', 'juegos clásicos', 'videojuegos recientes', 'catálogo de videojuegos', 'reseñas de videojuegos'],
+});
 
 export default function VideojuegosPage() {
   return <Catalogo />;

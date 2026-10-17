@@ -1,3 +1,4 @@
+import { crearMetadataVideojuegos } from '../../metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -16,7 +17,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const juego = juegos.find((item) => item.id === slug);
-  return { title: juego ? `${juego.titulo}: reseña | Isekai Respawn` : 'Reseña no encontrada | Isekai Respawn', description: juego?.descripcion };
+  if (!juego || !obtenerResena(slug)) notFound();
+  return crearMetadataVideojuegos({
+    titulo: `${juego.titulo}: reseña y valoraciones`,
+    descripcion: `Reseña de ${juego.titulo} sin spoilers: jugabilidad, historia, gráficos y sonido. Consulta sus puntos fuertes y las valoraciones de jugadores en PC.`,
+    ruta: `/videojuegos/resenas/${juego.id}`,
+    palabrasClave: [juego.titulo, `reseña ${juego.titulo}`, `análisis ${juego.titulo}`, juego.genero, juego.desarrollador, 'reseñas sin spoilers', 'valoraciones de jugadores'],
+    imagen: juego.imagenResena,
+    tipo: 'article',
+  });
 }
 
 export default async function ResenaPage({ params }: Props) {
@@ -58,4 +67,3 @@ export default async function ResenaPage({ params }: Props) {
     </article>
   );
 }
-

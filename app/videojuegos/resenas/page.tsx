@@ -1,3 +1,4 @@
+import { crearMetadataVideojuegos } from '../metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { juegos } from '../juegos';
@@ -6,29 +7,12 @@ import Portada from './Portada';
 import ValoracionUsuarios from '../ValoracionUsuarios';
 import styles from './resenas.module.css';
 
-export const metadata: Metadata = {
-  title: 'Reseñas de videojuegos | Isekai Respawn',
-  description: 'Explora nuestras reseñas editoriales de videojuegos recientes y clásicos. Jugabilidad, historia, arte y veredicto sin spoilers.',
-
-    keywords: ['anime', 'memes de anime sin anuncios', 'memes de anime 2026', 'memes graciosos de anime'],
-    openGraph: {
-        type: 'website',
-        title: `Isekai Respawn`,
-        description: `Tu portal a nuevos mundos.`,
-        images:[{
-            url:'/imagen_principal_inde.jpg',
-            alt: 'Imagen de isekai respawn',
-        }],
-        url:'/videojuegos/resenas',
-    },
-
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Isekai Respawn',
-        description: 'Tu portal a nuevos mundos.',
-        images: ['/imagen_principal_inde.jpg'],
-    },
-};
+export const metadata: Metadata = crearMetadataVideojuegos({
+  titulo: 'Reseñas de videojuegos sin spoilers',
+  descripcion: 'Explora reseñas de videojuegos recientes y clásicos: jugabilidad, historia, gráficos y sonido. Consulta valoraciones de jugadores y encuentra tu próxima aventura.',
+  ruta: '/videojuegos/resenas',
+  palabrasClave: ['reseñas de videojuegos', 'análisis de videojuegos', 'reseñas sin spoilers', 'jugabilidad', 'valoraciones de jugadores', 'juegos para PC'],
+});
 
 export default function ResenasPage() {
   return (
@@ -57,4 +41,3 @@ export default function ResenasPage() {
     </div>
   );
 }
-
