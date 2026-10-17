@@ -5,6 +5,6 @@ export default function robots() {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://acme.com/sitemap.xml',//CAMBIAR LUEGO
+        sitemap: 'https://isekayrespawn.vercel.app',//CAMBIAR LUEGO
     }
 }

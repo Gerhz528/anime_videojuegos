@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://tusitio.com'; // CAMBIAR LUEGO POR EL DOMINIO REAL
+    const baseUrl = 'https://isekayrespawn.vercel.app'; // CAMBIAR LUEGO POR EL DOMINIO REAL
 
     return [
         {
