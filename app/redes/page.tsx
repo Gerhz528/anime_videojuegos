@@ -28,7 +28,7 @@ const redes = [
     titulo: 'Síguenos en Facebook',
     descripcion:
       '¡En Facebook encontrarás noticias, memes y comentarios llenos de tips y recomendaciones de nuestra comunidad para disfrutar al máximo del anime y los videojuegos!',
-    url: 'https://facebook.com',
+    url: 'https://www.facebook.com/share/1EFeUcWRE7/',
     color: '#1877F2',
     icono: 'facebook',
   },
