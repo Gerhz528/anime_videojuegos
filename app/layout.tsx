@@ -52,6 +52,10 @@ export const metadata = {
     ],
   },
 
+  verification:{
+    google: 'NA2aIE3F1M39wYEg6RlewZe4wuN8ohvfPRlmFdr2C6M'
+  },
+
   twitter: {
     card: "summary_large_image",
     title: "Isekai Respawn",
