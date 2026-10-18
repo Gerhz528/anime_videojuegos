@@ -15,7 +15,7 @@ export const metadata = {
 
   title: {
     default: "Isekai Respawn | Noticias, Novedades y Memes",
-    template: "%s | Isekai Respawn",
+    template: "TPI115-2026 - %s | Isekai Respawn",
   },
   description:
     "Tu portal a nuevos mundos. Noticias, novedades y memes sobre anime y videojuegos.",
