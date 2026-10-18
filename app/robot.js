@@ -5,6 +5,6 @@ export default function robots() {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://isekayrespawn.vercel.app',//CAMBIAR LUEGO
+        sitemap: 'https://isekairespawn.vercel.app',//CAMBIAR LUEGO
     }
 }
