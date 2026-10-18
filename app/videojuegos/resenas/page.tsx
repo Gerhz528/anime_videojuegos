@@ -8,7 +8,7 @@ import ValoracionUsuarios from '../ValoracionUsuarios';
 import styles from './resenas.module.css';
 
 export const metadata: Metadata = crearMetadataVideojuegos({
-  titulo: 'Reseñas de videojuegos sin spoilers',
+  titulo: 'TPI115-2026 - Reseñas de videojuegos sin spoilers',
   descripcion: 'Explora reseñas de videojuegos recientes y clásicos: jugabilidad, historia, gráficos y sonido. Consulta valoraciones de jugadores y encuentra tu próxima aventura.',
   ruta: '/videojuegos/resenas',
   palabrasClave: ['reseñas de videojuegos', 'análisis de videojuegos', 'reseñas sin spoilers', 'jugabilidad', 'valoraciones de jugadores', 'juegos para PC'],

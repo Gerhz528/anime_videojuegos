@@ -6,7 +6,7 @@ import GaleriaMemes from './GaleriaMemes';
 import memesStyles from './memes.module.css';
 
 export const metadata: Metadata = crearMetadataVideojuegos({
-  titulo: 'Memes de videojuegos y humor gamer',
+  titulo: 'TPI115-2026 - Memes de videojuegos y humor gamer',
   descripcion: 'Disfruta memes de videojuegos en español sobre juegos clásicos, títulos actuales y la vida gamer. Explora la galería y amplía tus memes favoritos.',
   ruta: '/videojuegos/memes',
   palabrasClave: ['memes de videojuegos', 'humor gamer', 'memes gamer en español', 'memes de juegos clásicos', 'vida gamer'],
