@@ -14,7 +14,7 @@ export const metadata = {
   ),
 
   title: {
-    default: "Isekai Respawn | Noticias, Novedades y Memes",
+    default: " TPI115-2026 - Isekai Respawn | Noticias, Novedades y Memes",
     template: "TPI115-2026 - %s | Isekai Respawn",
   },
   description:
