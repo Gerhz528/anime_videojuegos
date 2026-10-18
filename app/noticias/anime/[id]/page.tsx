@@ -6,6 +6,16 @@ import styles from '../../noticias.module.css';
 
 type Props = { params: Promise<{ id: string }> };
 
+export async function generateStaticParams() {
+    // 1. Filtramos las noticias para quedarnos solo con las de videojuegos
+    const noticiasAnime = noticias.filter((n) => n.categoria === 'Anime');
+
+    // 2. Retornamos un array de objetos con los IDs
+    return noticiasAnime.map((noticia) => ({
+        id: noticia.id,
+    }));
+}
+
 export async function generateMetadata({ params }: Props) {
   const { id } = await params;
   const noticia = noticias.find((n) => n.id === id && n.categoria === 'Anime');

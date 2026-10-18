@@ -1,20 +1,11 @@
-// next.config.ts
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',       // 👈 Convierte el proyecto en HTML/CSS/JS estático
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'www.levelup.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'pub-f326d70e7a38422993ce7cd305c22dfb.r2.dev',
-      },
-      
-    ],
+    unoptimized: true,    // 👈 Obligatorio para que las imágenes funcionen sin servidor
   },
+  trailingSlash: true,    // 👈 Ayuda a que los enlaces funcionen bien en local
 };
 
 export default nextConfig;
